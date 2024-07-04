@@ -15,7 +15,11 @@ import pandas as pd,numpy,os,math
 #3.1 uso la funzione sum() per sommare tutti i nan del dataframe \\\\[[[sum se fatta una sola volta somma i nan delle colonne,fatta due volte ci da i totali dei nan]]]
 #esempio: somma_nan=df.isna().sum().sum()
 
-#4.0 questo lo faccio domani sera, è l'una di notte la sveglia suona tra 4 ore :O
+#4.0 Verificare se il valore "high" è maggiore o uguale al valore di apertura e di chiusura
+#4.1 Verificare se il valore "low" è inferiore o uguale al valore di apertura e di chiusura
+#4.2 Verificare se il valore "adj close" è inferiore o uguale al valore close
+
+#5.0 faccio il plot con mathplotlib tutto su un grafico
 
 
 
