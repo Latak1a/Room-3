@@ -56,7 +56,7 @@ low=df1["Low"]
 close=["Close"]
 adj=df1["Adj Close"]
 
-
+#plt.switch_backend('tkagg')
 plt.plot(high)
 plt.show()
 
