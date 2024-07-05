@@ -50,14 +50,17 @@ check_adjclose=df1["Adj Close"]<=df1["Close"]
 # df1[["Open","High","Low","Close","Adj Close"]].plot()
 # plt.show()
 
-high=df1["High"]
-open=df1["Open"]
-low=df1["Low"]
-close=["Close"]
-adj=df1["Adj Close"]
+# high=df1["High"]
+# open=df1["Open"]
+# low=df1["Low"]
+# close=["Close"]
+# adj=df1["Adj Close"]
 
 #plt.switch_backend('tkagg')
-plt.plot(high)
+df1[['High','Open','Low','Close', 'Adj Close']].plot()
+plt.title('TSLA Stock Trend')
+plt.xlabel('Non lo so')
+plt.ylabel('Prezzo')
 plt.show()
 
 
