@@ -55,8 +55,38 @@ plt.ylabel('Prezzo')
 plt.show()
 
 #RICHIESTA 2
+#1.0 Creo un funzione per calcolare la formula -> ADTV[i] = (Volume[i] + Volume[i-1] + Volume[i-2] + Volume[i-3] + Volume[i-4])/5
+def calcola_adtv():
+    adtv=[]
+    for i in range(len(df1)):
+        adtv_value = (df1['Volume'].iloc[i] + df1['Volume'].iloc[i-1] + df1['Volume'].iloc[i-2] + df1['Volume'].iloc[i-3] + df1['Volume'].iloc[i-4]) / 5
+        #qui in teoria faccio il punto in cui converto in intero direttamente nella funzione
+        adtv_int=int(adtv_value)
+        adtv.append(adtv_int)
+    df1["ADTV"]= adtv
+    
+calcola_adtv()
+print(df1)
 
+#2.0 Creo una funzione per calcolare la deviazione standard ->ADTV_std[i] = ((Volume[i]-ADTV[i])**2 + (Volume[i-1]-ADTV[i])**2 + (Volume[i-1]-ADTV[i])**2 +
+#                                                                           + (Volume[i-1]-ADTV[i])**2 + Volume[i-1]-ADTV[i])**2)/5
 
+def deviazione_adtv():
+    dev_adtv=[]
+    for i in range(len(df1)):
+        dev_value_adtv=((df1['Volume'].iloc[i]- df1['ADTV'].iloc[i])**2 + (df1['Volume'].iloc[i-1]- df1['ADTV'].iloc[i])**2 + (df1['Volume'].iloc[i-2]- df1['ADTV'].iloc[i])**2+ (df1['Volume'].iloc[i-3]- df1['ADTV'].iloc[i])**2 + (df1['Volume'].iloc[i-4]- df1['ADTV'].iloc[i])**2)/5
+        dev_value_adtv_int=int(dev_value_adtv)
+        dev_adtv.append(dev_value_adtv_int)
+    df1["ADTV std"] = dev_adtv
+    
+deviazione_adtv()
+print(df1)
 
+df1[['ADTV','ADTV std']].plot()
+plt.title('ADTV + ADTV std')
+plt.xlabel('Non lo so')
+plt.ylabel('Prezzo')
+plt.show()
 
+###perchè esce solo adtv std?????????????????????                  
 
