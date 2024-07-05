@@ -1,3 +1,5 @@
+#RICHIESTA 1
+
 #importo pandas,numpy os e math
 import pandas as pd,numpy,os,math
 from matplotlib import pyplot as plt
@@ -22,7 +24,6 @@ sommario2=df1.info()
 
 #3.0 uso la funzione isna() sul dataframe per vedere se ci sono nan -> restituisce true 
 #esempio: check_nan=df.isna() -> print(check_nan)
-
 n_a_n=df1.isna()
 #print(n_a_n)
 
@@ -52,6 +53,8 @@ plt.title('TSLA Stock Trend')
 plt.xlabel('Non lo so')
 plt.ylabel('Prezzo')
 plt.show()
+
+#RICHIESTA 2
 
 
 
