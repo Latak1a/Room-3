@@ -47,16 +47,6 @@ check_adjclose=df1["Adj Close"]<=df1["Close"]
 #print(check_adjclose)
 
 #5.0 faccio il plot con mathplotlib tutto su un grafico
-# df1[["Open","High","Low","Close","Adj Close"]].plot()
-# plt.show()
-
-# high=df1["High"]
-# open=df1["Open"]
-# low=df1["Low"]
-# close=["Close"]
-# adj=df1["Adj Close"]
-
-#plt.switch_backend('tkagg')
 df1[['High','Open','Low','Close', 'Adj Close']].plot()
 plt.title('TSLA Stock Trend')
 plt.xlabel('Non lo so')
