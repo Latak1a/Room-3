@@ -50,7 +50,7 @@ check_adjclose=df1["Adj Close"]<=df1["Close"]
 #5.0 faccio il plot con mathplotlib tutto su un grafico
 df1[['High','Open','Low','Close', 'Adj Close']].plot()
 plt.title('TSLA Stock Trend')
-plt.xlabel('Non lo so')
+plt.xlabel('Data')
 plt.ylabel('Prezzo')
 plt.show()
 
