@@ -1,4 +1,4 @@
-import pandas as pd,math,numpy as np
+import pandas as pd,math,numpy as np,os
 
 
 def calcola_adtv(df, nGiorni: int = 5):
@@ -21,7 +21,7 @@ def calcola_adtv(df, nGiorni: int = 5):
 def calcola_adtv_std(df, nGiorni: int = 5):
     # sqrt((Volume[i]-ADTV[i])**2 + (Volume[i-1]-ADTV[i])**2 + (Volume[i-2]-ADTV[i])**2 +
     #              + (Volume[i-3]-ADTV[i])**2 + Volume[i-4]-ADTV[i])**2)/5)
-    # sommaCumilativa += (volume[i] + adtv[i-k])**2 con k da 0 a nGiorni - 1
+    # sommaCumulativa += (volume[i] + adtv[i-k])**2 con k da 0 a nGiorni - 1
     adtv_std = 0
     adtv_std_column = [0 for x in range(nGiorni)]
     for i in range(nGiorni,df.shape[0]):
@@ -43,3 +43,21 @@ def calcola_media_10_giorni(df, nGiorni=10):
     adtv_10 = df[f'ADTV {nGiorni}'].mean()
     adtv_std_10 = df[f'ADTV Std {nGiorni}'].mean()
     return df, adtv_10, adtv_std_10
+
+def save_csv(df):
+    output_dir = "Output_data"
+    file_name = "Modified_TSLA.csv"
+    
+    if not os.path.isdir(output_dir):
+        os.mkdir(output_dir) 
+        os.chdir(output_dir)
+        if os.path.exists(file_name):
+            df.to_csv(file_name, mode="w+", index=False)
+        else:
+            df.to_csv(file_name, index=False)  
+    elif os.path.isdir(output_dir):
+        os.chdir(output_dir)
+        if os.path.exists(file_name):
+            df.to_csv(file_name, mode="w+", index=False)
+        else:
+            df.to_csv(file_name, index=False)

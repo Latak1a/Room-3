@@ -1,7 +1,7 @@
 #RICHIESTA 1
 
-#importo pandas,numpy os e math
-import pandas as pd,numpy,os,math
+#importo pandas, os 
+import pandas as pd,os
 from matplotlib import pyplot as plt
 import function
 
@@ -9,11 +9,10 @@ import function
 #1.0 per importare le 700 righe, trasformo il csv in un dataframe
 x1=pd.read_csv(filepath_or_buffer="TSLA.CSV",nrows=700)
 df1=pd.DataFrame(x1)
-#print(df1)
+
 
 # #1.2 uso la funzione display per mostrare il nuovo data frame che contiene solo le 700 righe.
 # #display ???__??? -> funziona sola nel notebook non nello script pyton 
-
 
 #2.0 faccio il sommario del data frame di 700 righe, tramite la funzione describe
 sommario=df1.describe()
@@ -22,27 +21,25 @@ sommario2=df1.info()
 
 # #3.0 uso la funzione isna() sul dataframe per vedere se ci sono nan -> restituisce true 
 n_a_n=df1.isna()
-#print(n_a_n)
+
 
 # #3.1 uso la funzione sum() per sommare tutti i nan del dataframe 
 somma_nan=df1.isna().sum().sum()
-# #print(somma_nan)
+
 
 # #4.0 Verificare se il valore "high" è maggiore o uguale al valore di apertura e di chiusura
 check_high=df1["High"]>=df1["Open"] 
 check_close=df1["High"]>=df1["Close"]
-# print(check_high)
-# print(check_close)
+
 
 # #4.1 Verificare se il valore "low" è inferiore o uguale al valore di apertura e di chiusura
 check_low=df1["Low"]<=df1["Open"]
 check_low2=df1["Low"]<=df1["Close"]
-# #print(check_low)
-# #print(check_low2)
+
 
 # #4.2 Verificare se il valore "adj close" è inferiore o uguale al valore close
 check_adjclose=df1["Adj Close"]<=df1["Close"]
-# #print(check_adjclose)
+
 
 # #5.0 faccio il plot con mathplotlib tutto su un grafico
 df1[['High','Open','Low','Close', 'Adj Close']].plot()
@@ -100,11 +97,16 @@ df1=df1.drop(columns=["ADTV 2","ADTV Std 2",
                       "ADTV 10","ADTV Std 10",
                       "ADTV 20","ADTV Std 20",
                       "ADTV 50","ADTV Std 50"],axis="columns")
-#print(df1)
+
 #2.0 aggiungo "ADTV" e "ADTV std" per la media di 10 giorni
+df2=function.calcola_media_10_giorni(df1,nGiorni=10)
+df2=pd.DataFrame(df1)
+#print(df2)
 
-df1=function.calcola_media_10_giorni(df1,nGiorni=10)
-print(df1)
+# #RICHIESTA 5
+# #Creo la directory "Output_data" nel percorso di dove si trova il progetto e
+# #salvo il data frame aggiornato sottoforma di csv chiamato 'Modified_TSLA.csv'
+# #quindi sarebbe il data frame ultimo di richiesta 4.(volevo si possono salvare anche gli altri)
 
-#RICHIESTA 5
-## la farò tra oggi e domani se ho tempo e voglia!!!!
+path=os.getcwd()
+function.save_csv(df2)
