@@ -108,5 +108,4 @@ df2=pd.DataFrame(df1)
 # #salvo il data frame aggiornato sottoforma di csv chiamato 'Modified_TSLA.csv'
 # #quindi sarebbe il data frame ultimo di richiesta 4.(volevo si possono salvare anche gli altri)
 
-path=os.getcwd()
 function.save_csv(df2)
