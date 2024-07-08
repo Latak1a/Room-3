@@ -29,7 +29,7 @@ def calcola_adtv_std(df, nGiorni: int = 5):
             adtv_std += df.loc[i, "Volume"] + df.loc[i-k, f"ADTV {nGiorni}"]
  
         adtv_std /= nGiorni
-        adtv_std = int(math.sqrt(adtv_std))
+        adtv_std = int(math.sqrt(adtv_std))**2
        
         adtv_std_column.append(adtv_std)  
  
