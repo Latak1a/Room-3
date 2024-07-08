@@ -43,15 +43,17 @@ check_adjclose=df1["Adj Close"]<=df1["Close"]
 
 
 # #5.0 faccio il plot con mathplotlib tutto su un grafico
-plt.plot(df1["Date"],df1['High'])
-plt.plot(df1["Date"],df1['Open'])
-plt.plot(df1["Date"],df1['Low'])
-plt.plot(df1["Date"],df1['Close'])
-plt.plot(df1["Date"],df1['Adj Close'])
+# plt.plot(df1["Date"],df1['High'])
+# plt.plot(df1["Date"],df1['Open'])
+# plt.plot(df1["Date"],df1['Low'])
+# plt.plot(df1["Date"],df1['Close'])
+# plt.plot(df1["Date"],df1['Adj Close'])
+plt.plot(df1["Date"],df1["High"],df1["Date"],df1["Open"],df1["Date"],df1["Low"],df1["Date"],df1["Close"],df1["Date"],df1["Adj Close"])
 plt.title('TSLA Stock Trend')
 plt.xticks(np.arange(0, 699, 50),rotation=45)
 plt.xlabel('Data')
 plt.ylabel('Prezzo')
+plt.legend(["High","Open","Low","Close","Adj Close"])
 plt.show()
 
 # #RICHIESTA 2 + RICHIESTA 3 
