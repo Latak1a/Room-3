@@ -4,6 +4,7 @@
 import pandas as pd,os
 from matplotlib import pyplot as plt
 import function
+import numpy as np
 
 #importo le prime 700 righe dal csv
 #1.0 per importare le 700 righe, trasformo il csv in un dataframe
@@ -42,8 +43,13 @@ check_adjclose=df1["Adj Close"]<=df1["Close"]
 
 
 # #5.0 faccio il plot con mathplotlib tutto su un grafico
-df1[['High','Open','Low','Close', 'Adj Close']].plot()
+plt.plot(df1["Date"],df1['High'])
+plt.plot(df1["Date"],df1['Open'])
+plt.plot(df1["Date"],df1['Low'])
+plt.plot(df1["Date"],df1['Close'])
+plt.plot(df1["Date"],df1['Adj Close'])
 plt.title('TSLA Stock Trend')
+plt.xticks(np.arange(0, 699, 50),rotation=45)
 plt.xlabel('Data')
 plt.ylabel('Prezzo')
 plt.show()
@@ -69,22 +75,23 @@ df1 = function.calcola_adtv_std(df1,nGiorni = 50)
 
 #print(df1)
 
-plt.plot(df1['ADTV 2'],label="ADTV 2 GIORNI")
-plt.plot(df1['ADTV Std 2'],label="ADTV STD 2 GIORNI")
+plt.plot(df1['Date'],df1['ADTV 2'],label="ADTV 2 GIORNI")
+plt.plot(df1['Date'],df1['ADTV Std 2'],label="ADTV STD 2 GIORNI")
 
-plt.plot(df1['ADTV 5'],label="ADTV 5 GIORNI")
-plt.plot(df1['ADTV Std 5'],label="ADTV STD 5 GIORNI")
+plt.plot(df1['Date'],df1['ADTV 5'],label="ADTV 5 GIORNI")
+plt.plot(df1['Date'],df1['ADTV Std 5'],label="ADTV STD 5 GIORNI")
 
-plt.plot(df1['ADTV 10'],label="ADTV 10 GIORNI")
-plt.plot(df1['ADTV Std 10'],label="ADTV STD 10 GIORNI")
+plt.plot(df1['Date'],df1['ADTV 10'],label="ADTV 10 GIORNI")
+plt.plot(df1['Date'],df1['ADTV Std 10'],label="ADTV STD 10 GIORNI")
 
-plt.plot(df1['ADTV 20'],label="ADTV 20 GIORNI")
-plt.plot(df1['ADTV Std 20'],label="ADTV STD 20 GIORNI")
+plt.plot(df1['Date'],df1['ADTV 20'],label="ADTV 20 GIORNI")
+plt.plot(df1['Date'],df1['ADTV Std 20'],label="ADTV STD 20 GIORNI")
 
-plt.plot(df1['ADTV 50'],label="ADTV 50 GIORNI")
-plt.plot(df1['ADTV Std 50'],label="ADTV STD 50 GIORNI")
+plt.plot(df1['Date'],df1['ADTV 50'],label="ADTV 50 GIORNI")
+plt.plot(df1['Date'],df1['ADTV Std 50'],label="ADTV STD 50 GIORNI")
 
 plt.title('ADTV for different days')
+plt.xticks(np.arange(0, 699, 100),rotation=45)
 plt.legend()
 plt.xlabel('Date')
 plt.ylabel('ADTV')
