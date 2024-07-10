@@ -61,3 +61,10 @@ def save_csv(df):
             df.to_csv(file_name, mode="w+", index=False)
         else:
             df.to_csv(file_name, index=False)
+            
+def build_xticklabels(column, start, end, frequency):
+    xticklabels = []
+    for idx in range(int(start), int(end)):
+        if idx % frequency == 0:
+            xticklabels.append(idx)
+    return xticklabels
