@@ -26,10 +26,10 @@ def calcola_adtv_std(df, nGiorni: int = 5):
     adtv_std_column = [0 for x in range(nGiorni)]
     for i in range(nGiorni,df.shape[0]):
         for k in range(nGiorni):
-            adtv_std += df.loc[i, "Volume"] + df.loc[i-k, f"ADTV {nGiorni}"]
+            adtv_std += (df.loc[i-k, "Volume"] - df.loc[i, f"ADTV {nGiorni}"])**2
  
         adtv_std /= nGiorni
-        adtv_std = int(math.sqrt(adtv_std))**2
+        adtv_std = int(math.sqrt(adtv_std))
        
         adtv_std_column.append(adtv_std)  
  
