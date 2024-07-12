@@ -7,7 +7,7 @@ import function
 import numpy as np
 
 #importo le prime 700 righe dal csv
-#1.0 per importare le 700 righe, trasformo il csv in un dataframe
+#1.0 per importare le 700 righe, trasformo il csv in un dataframe -> #FARE PRINT X LOGGER
 x1=pd.read_csv(filepath_or_buffer="TSLA.CSV",nrows=700)
 df1=pd.DataFrame(x1)
 
@@ -20,25 +20,25 @@ sommario=df1.describe()
 sommario2=df1.info()
 
 
-# #3.0 uso la funzione isna() sul dataframe per vedere se ci sono nan -> restituisce true 
+# #3.0 uso la funzione isna() sul dataframe per vedere se ci sono nan -> restituisce true -> #FARE PRINT X LOGGER
 n_a_n=df1.isna()
 
 
-# #3.1 uso la funzione sum() per sommare tutti i nan del dataframe 
+# #3.1 uso la funzione sum() per sommare tutti i nan del dataframe -> #FARE PRINT X LOGGER
 somma_nan=df1.isna().sum().sum()
 
 
-# #4.0 Verificare se il valore "high" è maggiore o uguale al valore di apertura e di chiusura
+# #4.0 Verificare se il valore "high" è maggiore o uguale al valore di apertura e di chiusura-> #FARE PRINT X LOGGER
 check_high=df1["High"]>=df1["Open"] 
 check_close=df1["High"]>=df1["Close"]
 
 
-# #4.1 Verificare se il valore "low" è inferiore o uguale al valore di apertura e di chiusura
+# #4.1 Verificare se il valore "low" è inferiore o uguale al valore di apertura e di chiusura-> #FARE PRINT X LOGGER
 check_low=df1["Low"]<=df1["Open"]
 check_low2=df1["Low"]<=df1["Close"]
 
 
-# #4.2 Verificare se il valore "adj close" è inferiore o uguale al valore close
+# #4.2 Verificare se il valore "adj close" è inferiore o uguale al valore close-> #FARE PRINT X LOGGER
 check_adjclose=df1["Adj Close"]<=df1["Close"]
 
 
@@ -55,6 +55,11 @@ plt.xlabel('Data')
 plt.ylabel('Prezzo')
 plt.legend(["High","Open","Low","Close","Adj Close"])
 plt.show()
+
+#Implemento la funzione fill_between()
+
+
+
 
 # #RICHIESTA 2 + RICHIESTA 3 
 
@@ -100,7 +105,7 @@ plt.ylabel('ADTV')
 plt.show()
 
 #RICHIESTA 4
-#1.0 droppo tutte le colonne "ADTV" e "ADTV std"
+#1.0 droppo tutte le colonne "ADTV" e "ADTV std"-> #FARE PRINT X LOGGER
 df1=df1.drop(columns=["ADTV 2","ADTV Std 2",
                       "ADTV 5","ADTV Std 5",
                       "ADTV 10","ADTV Std 10",
