@@ -5,12 +5,15 @@ import pandas as pd,os
 from matplotlib import pyplot as plt
 import function
 import numpy as np
+import start_logger as lg
 
 #importo le prime 700 righe dal csv
 #1.0 per importare le 700 righe, trasformo il csv in un dataframe -> #FARE PRINT X LOGGER
 x1=pd.read_csv(filepath_or_buffer="TSLA.CSV",nrows=700)
 df1=pd.DataFrame(x1)
 
+
+lg.logging.info(print("importo le prime 700 righe dal csv"))
 
 # # #1.2 uso la funzione display per mostrare il nuovo data frame che contiene solo le 700 righe.
 # # #display ???__??? -> funziona sola nel notebook non nello script pyton 
@@ -113,6 +116,7 @@ plt.show()
 
 #RICHIESTA 4
 #1.0 droppo tutte le colonne "ADTV" e "ADTV std"-> #FARE PRINT X LOGGER
+
 df1=df1.drop(columns=["ADTV 2","ADTV Std 2",
                       "ADTV 5","ADTV Std 5",
                       "ADTV 10","ADTV Std 10",
