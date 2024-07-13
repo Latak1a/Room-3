@@ -1,5 +1,6 @@
 import pandas as pd,math,numpy as np,os
-
+from matplotlib import pyplot as plt
+import copy
 
 def calcola_adtv(df, nGiorni: int = 5):
     # Volume[i] + Volume[i-1] + Volume[i-2] + Volume[i-3] + Volume[i-4]
@@ -68,3 +69,31 @@ def build_xticklabels(column, start, end, frequency):
         if idx % frequency == 0:
             xticklabels.append(idx)
     return xticklabels
+    
+def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
+    nRighe = 3; nColonne = 2
+    dimensioneFigura = (4 , 8)
+    fig, axs = plt.subplots(nRighe, nColonne, figsize = dimensioneFigura)
+ # 1 Individuare le colonne da plottare
+    listaColonne = list(df.columns)
+    listaColonne=df.drop(columns=[nomeColonnaPrincipale], inplace=True)
+    # 2. Produrre la griglia di grafici 3x2
+    
+    def daPosizioneAIndici() -> list:
+    # da listaColonne a [[0,0], [0,1], [1,0], [1,1], [2,0], [2,1]]
+        listaIndici = []
+        for i in range(nRighe):
+            for j in range(nColonne):
+                listaIndici.append([i, j])
+        return listaIndici
+
+    listaIndici = daPosizioneAIndici()
+
+    for index, colonna in enumerate(listaColonne):####errore?=?????==???
+        axs[listaIndici[index][0]][listaIndici[index][1]].scatter(df[nomeColonnaPrincipale]/df[nomeColonnaPrincipale].max(), df[colonna]/df[colonna].max())
+        ##############
+        #nomeColonnaPrincipale è di tipo str e non posso farel a normalizzazione,quindi ho pensato di farla fuori
+        ##############
+        axs[listaIndici[index][0]][listaIndici[index][1]].title(f"{nomeColonnaPrincipale} vs {colonna}")
+    
+    plt.show()

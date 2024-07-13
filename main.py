@@ -142,3 +142,6 @@ logger.debug("creata la funzione per salvare il csv")
 # #quindi sarebbe il data frame ultimo di richiesta 4.(volevo si possono salvare anche gli altri)
 
 function.save_csv(df2)
+
+function.correlazioni('Open',df1)
+
