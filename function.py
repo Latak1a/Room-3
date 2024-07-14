@@ -75,8 +75,7 @@ def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
     dimensioneFigura = (4 , 8)
     fig, axs = plt.subplots(nRighe, nColonne, figsize = dimensioneFigura)
  # 1 Individuare le colonne da plottare
-    listaColonne = list(df.columns)
-    listaColonne=df.drop(columns=[nomeColonnaPrincipale], inplace=True)
+    listaColonne = [col for col in df.columns if col != nomeColonnaPrincipale]
     # 2. Produrre la griglia di grafici 3x2
     
     def daPosizioneAIndici() -> list:
@@ -88,12 +87,13 @@ def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
         return listaIndici
 
     listaIndici = daPosizioneAIndici()
-
-    for index, colonna in enumerate(listaColonne):####errore?=?????==???
-        axs[listaIndici[index][0]][listaIndici[index][1]].scatter(df[nomeColonnaPrincipale]/df[nomeColonnaPrincipale].max(), df[colonna]/df[colonna].max())
-        ##############
-        #nomeColonnaPrincipale è di tipo str e non posso farel a normalizzazione,quindi ho pensato di farla fuori
-        ##############
-        axs[listaIndici[index][0]][listaIndici[index][1]].title(f"{nomeColonnaPrincipale} vs {colonna}")
     
+    for index, colonna in enumerate(listaColonne):
+        riga, col = listaIndici[index]
+        df[colonna] = pd.to_numeric(df[colonna])   ##errore colonna data da stringa a numero?????
+        df[colonna] /= df[colonna].max()
+        
+      
+        axs[riga][col].scatter(df[nomeColonnaPrincipale], df[colonna])
+        axs[riga][col].set_title(f"{nomeColonnaPrincipale} vs {colonna}")
     plt.show()
