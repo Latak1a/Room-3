@@ -143,5 +143,5 @@ logger.debug("creata la funzione per salvare il csv")
 
 function.save_csv(df2)
 
-function.correlazioni('Open',df1)
+function.correlazioni('Open',df1,df1["Date"])
 

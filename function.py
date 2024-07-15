@@ -92,8 +92,6 @@ def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
         riga, col = listaIndici[index]
         df[colonna] = pd.to_numeric(df[colonna])   ##errore colonna data da stringa a numero?????
         df[colonna] /= df[colonna].max()
-        
-      
         axs[riga][col].scatter(df[nomeColonnaPrincipale], df[colonna])
         axs[riga][col].set_title(f"{nomeColonnaPrincipale} vs {colonna}")
     plt.show()
