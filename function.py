@@ -72,10 +72,16 @@ def build_xticklabels(column, start, end, frequency):
     
 def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
     nRighe = 3; nColonne = 2
-    dimensioneFigura = (4 , 8)
+    dimensioneFigura = (8 , 8)
     fig, axs = plt.subplots(nRighe, nColonne, figsize = dimensioneFigura)
+    
+    
  # 1 Individuare le colonne da plottare
-    listaColonne = [col for col in df.columns if col != nomeColonnaPrincipale]
+    listaColonne = list(df.columns)
+    listaColonne.remove(nomeColonnaPrincipale)
+    df_adtv5=calcola_adtv(df,5)
+    df.insert(column=7,value=df_adtv5,loc=5)#########################verificare funzione insert
+    #print(listaColonne)
     # 2. Produrre la griglia di grafici 3x2
     
     def daPosizioneAIndici() -> list:
@@ -84,18 +90,18 @@ def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
         for i in range(nRighe):
             for j in range(nColonne):
                 listaIndici.append([i, j])
+                #print(listaIndici)
         return listaIndici
 
     listaIndici = daPosizioneAIndici()
     
     for index, colonna in enumerate(listaColonne):
-        riga, col = listaIndici[index]
-        #converto in numeri le colonne per normalizzare i dati
-        df[colonna] = pd.to_numeric(df[colonna])   ##errore colonna data da stringa a numero?????
-        #normalizzo i dati
-        df[colonna] /= df[colonna].max()
-        
+        riga, col = listaIndici[index]        
         #parti del grafico
-        axs[riga][col].scatter(df[nomeColonnaPrincipale], df[colonna])
+        axs[riga][col].scatter(df[nomeColonnaPrincipale]/df[nomeColonnaPrincipale].max(), df[colonna])
         axs[riga][col].set_title(f"{nomeColonnaPrincipale} vs {colonna}")
+        axs[riga][col].set_xlabel(nomeColonnaPrincipale)
+        axs[riga][col].set_ylabel(colonna)
+    
+    fig.tight_layout()
     plt.show()

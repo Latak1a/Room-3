@@ -143,5 +143,7 @@ logger.debug("creata la funzione per salvare il csv")
 
 function.save_csv(df2)
 
+df1=df1.drop(columns=["ADTV 10","ADTV Std 10","Date"])
+
 function.correlazioni('Open',df1)
 
