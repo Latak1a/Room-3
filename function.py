@@ -90,8 +90,12 @@ def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
     
     for index, colonna in enumerate(listaColonne):
         riga, col = listaIndici[index]
+        #converto in numeri le colonne per normalizzare i dati
         df[colonna] = pd.to_numeric(df[colonna])   ##errore colonna data da stringa a numero?????
+        #normalizzo i dati
         df[colonna] /= df[colonna].max()
+        
+        #parti del grafico
         axs[riga][col].scatter(df[nomeColonnaPrincipale], df[colonna])
         axs[riga][col].set_title(f"{nomeColonnaPrincipale} vs {colonna}")
     plt.show()
