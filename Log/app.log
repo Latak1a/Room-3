@@ -977,3 +977,135 @@
 2024-07-15 21:06:57,237 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
 2024-07-15 21:06:57,242 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
 2024-07-15 21:06:57,567 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 18:47:48,686 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 18:47:48,768 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 18:47:48,769 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 18:47:48,773 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 18:47:48,774 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 18:47:48,775 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 18:47:51,278 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 18:47:56,239 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 18:47:58,106 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 18:47:58,133 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 18:47:58,473 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 18:49:17,619 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 18:49:17,641 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 18:49:17,643 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 18:49:17,645 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 18:49:17,646 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 18:49:17,647 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 18:49:19,545 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 18:49:26,358 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 18:49:28,015 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 18:49:28,028 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 18:49:28,411 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 18:50:09,911 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 18:50:09,937 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 18:50:09,938 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 18:50:09,939 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 18:50:09,940 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 18:50:09,941 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 18:50:14,876 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 18:50:20,087 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 18:50:21,567 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 18:50:21,582 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 18:50:21,915 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 19:15:14,968 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 19:15:14,989 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 19:15:14,990 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 19:15:14,991 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:15:14,992 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:15:14,993 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 19:15:16,722 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 19:15:22,055 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 19:15:23,509 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 19:15:23,520 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 19:15:23,859 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 19:15:53,136 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 19:15:53,159 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 19:15:53,160 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 19:15:53,161 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:15:53,162 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:15:53,163 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 19:15:54,747 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 19:15:59,354 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 19:16:00,364 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 19:16:00,386 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 19:16:00,730 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 19:19:50,090 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 19:19:50,125 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 19:19:50,126 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 19:19:50,127 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:19:50,133 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:19:50,134 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 19:19:52,884 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 19:19:58,683 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 19:20:00,807 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 19:20:00,855 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 19:20:01,260 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 19:21:04,191 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 19:21:04,215 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 19:21:04,216 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 19:21:04,219 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:21:04,221 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:21:04,221 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 19:21:06,074 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 19:21:11,478 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 19:21:13,121 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 19:21:13,125 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 19:21:13,522 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 19:22:34,959 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 19:22:34,983 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 19:22:34,984 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 19:22:34,985 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:22:34,989 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:22:34,991 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 19:22:37,245 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 19:22:42,499 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 19:22:43,881 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 19:22:43,884 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 19:22:44,316 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 19:23:23,713 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 19:23:23,736 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 19:23:23,736 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 19:23:23,737 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:23:23,740 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:23:23,746 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 19:23:25,888 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 19:23:32,819 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 19:23:34,166 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 19:23:34,199 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 19:23:34,554 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 19:26:16,199 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 19:26:16,218 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 19:26:16,219 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 19:26:16,223 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:26:16,225 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:26:16,225 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 19:26:18,238 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 19:26:23,588 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 19:26:25,352 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 19:26:25,363 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 19:26:25,761 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 19:28:02,566 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 19:28:02,609 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 19:28:02,611 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 19:28:02,612 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:28:02,615 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:28:02,617 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 19:28:09,525 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 19:28:15,341 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 19:28:16,796 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 19:28:16,832 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 19:28:17,256 - my_logger - DEBUG - creata la funzione per salvare il csv
+2024-07-16 19:51:52,250 - my_logger - DEBUG - Importo le prime 700 righe del csv
+2024-07-16 19:51:52,281 - my_logger - DEBUG - uso la funzione isna() sul dataframe per vedere se ci sono nan
+2024-07-16 19:51:52,281 - my_logger - DEBUG - uso la funzione sum() per sommare tutti i nan del dataframe
+2024-07-16 19:51:52,282 - my_logger - DEBUG - Verifico se il valore di high è maggiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:51:52,283 - my_logger - DEBUG - Verifico se il valore di low è inferiore o uguale al valore di apertura e di chiusura 
+2024-07-16 19:51:52,284 - my_logger - DEBUG - Verifico se il valore di adj close è inferiore o uguale al valore di close 
+2024-07-16 19:51:54,382 - my_logger - DEBUG - Creo una libreria per tutte le funzioni 
+2024-07-16 19:51:59,626 - my_logger - DEBUG - implemento la funzione fill_between()
+2024-07-16 19:52:01,245 - my_logger - DEBUG - droppo tutte le colonne ADTV e ADTV std
+2024-07-16 19:52:01,254 - my_logger - DEBUG - aggiungo ADTV e ADTV Std per la media di 10 giorni
+2024-07-16 19:52:01,640 - my_logger - DEBUG - creata la funzione per salvare il csv

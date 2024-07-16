@@ -75,22 +75,16 @@ def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
     dimensioneFigura = (8 , 8)
     fig, axs = plt.subplots(nRighe, nColonne, figsize = dimensioneFigura)
     
-    
- # 1 Individuare le colonne da plottare
-    listaColonne = list(df.columns)
-    listaColonne.remove(nomeColonnaPrincipale)
     df_adtv5=calcola_adtv(df,5)
-    df.insert(column=7,value=df_adtv5,loc=5)#########################verificare funzione insert
-    #print(listaColonne)
-    # 2. Produrre la griglia di grafici 3x2
-    
+    df=pd.concat([df,df_adtv5["ADTV 5"]])
+    listaColonne = list(df.columns)
+    listaColonne.remove(nomeColonnaPrincipale)  
+      
     def daPosizioneAIndici() -> list:
-    # da listaColonne a [[0,0], [0,1], [1,0], [1,1], [2,0], [2,1]]
         listaIndici = []
         for i in range(nRighe):
             for j in range(nColonne):
                 listaIndici.append([i, j])
-                #print(listaIndici)
         return listaIndici
 
     listaIndici = daPosizioneAIndici()
@@ -102,6 +96,7 @@ def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
         axs[riga][col].set_title(f"{nomeColonnaPrincipale} vs {colonna}")
         axs[riga][col].set_xlabel(nomeColonnaPrincipale)
         axs[riga][col].set_ylabel(colonna)
-    
+        axs[riga][col].grid()
+        
     fig.tight_layout()
     plt.show()
