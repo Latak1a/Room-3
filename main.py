@@ -113,11 +113,22 @@ x=df1["Date"]
 y=df1["ADTV 2"]
 delta=df1["ADTV Std 2"]
 
-plt.plot(df1["Date"],df1["ADTV 2"])
+plt.plot(df1["Date"],df1["ADTV 5"])
 plt.fill_between(x,y-delta,y+delta,facecolor="C0",alpha=0.4)
 plt.xlim(0,700)
 plt.xticks(np.arange(0,700,200))
+plt.show()
 
+#Istogramma
+logger.debug("Aggiungo l'istogramma")
+fig, ax = plt.subplots(figsize=(9, 7))
+ax.hist(df1["ADTV 5"],color='C0', bins = 50)
+ax.hist(df1["ADTV Std 5"],color='C1', bins = 50)
+ax.set_title('Istogramma')
+ax.set_xlabel('ADTV 5')
+ax.set_ylabel('ADTV Std 5')
+ax.grid()
+fig.tight_layout()
 plt.show()
 
 #RICHIESTA 4
