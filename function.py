@@ -115,9 +115,26 @@ def hist(df):
     #secondo grafico in alto a destra
     axs[0][1].hist(df["ADTV 5"],color='C0', bins = 10)
     axs[0][1].hist(df["ADTV Std 5"],color='C1', bins = 10)
-    axs.set_xlabel('ADTV 5 vs ADTV Std 5 (con bassi bin)')   
+    axs[0][1].set_xlabel('ADTV 5 vs ADTV Std 5 (con bassi bin)')   
+    #secondo grafico a sinistra
+    axs[1][0].hist(df["ADTV 5"],color='C0', bins = 300)
+    axs[1][0].hist(df["ADTV Std 5"],color='C1', bins = 300)
+    axs[1][0].set_xlabel('ADTV 5 vs ADTV Std 5 (con alti bin)')  
+
+    #grafico 4 
+    axs[1][1].hist(df["ADTV 5"],color='C0', bins = 40)
+    axs[1][1].hist(df["Volume"],color='C1', bins = 40)
+    axs[1][1].set_xlabel('ADTV 5 vs Volume (con normali bin)')
+    #grafico 5
+    axs[2][0].hist(df["ADTV 5"],color='C0', bins = 60)
+    axs[2][0].hist(df["Volume"],color='C1', bins = 60)
+    axs[2][0].set_xlabel('ADTV 5 vs Volume (con normali bin)')
+    #grafico 6
+    axs[2][1].hist(df["ADTV 5"],color='C0', bins = 80)
+    axs[2][1].hist(df["Volume"],color='C1', bins = 80)
+    axs[2][1].set_xlabel('ADTV 5 vs Volume (con normali bin)')
     
-    
+    fig.tight_layout()
     plt.show()
 
     

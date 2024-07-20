@@ -161,3 +161,7 @@ function.correlazioni('Open',df1)
 
 #request 8
 function.hist(df1)
+
+#tute le righe da 40milioni a 70milioni nella colonna volume
+df_400=df1.loc[400:,:]
+print(df_400)
