@@ -122,11 +122,11 @@ plt.show()
 #Istogramma
 logger.debug("Aggiungo l'istogramma")
 fig, ax = plt.subplots(figsize=(9, 7))
-ax.hist(df1["ADTV 5"],color='C0', bins = 100)
-ax.hist(df1["ADTV Std 5"],color='C1', bins = 100)
+ax.hist(df1["ADTV 5"],color='C0', bins = 50)
+#ax.hist(df1["ADTV Std 5"],color='C1', bins = 100)
 ax.set_title('Istogramma')
 ax.set_xlabel('ADTV 5')
-ax.set_ylabel('ADTV Std 5')
+# ax.set_ylabel('ADTV Std 5')
 ax.grid()
 fig.tight_layout()
 plt.show()
@@ -158,3 +158,6 @@ df1=df1.drop(columns=["ADTV 10","ADTV Std 10","Date"])
 
 function.correlazioni('Open',df1)
 
+
+#request 8
+function.hist(df1)

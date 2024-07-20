@@ -100,3 +100,24 @@ def correlazioni(nomeColonnaPrincipale: str, df: pd.DataFrame):
         
     fig.tight_layout()
     plt.show()
+    
+def hist(df):
+    nRighe = 3; nColonne = 2
+    dimensioneFigura = (8 , 8)
+    fig, axs = plt.subplots(nRighe, nColonne, figsize = dimensioneFigura)
+
+    adtv5 = calcola_adtv(df,nGiorni = 5)
+    adtv_std5 = calcola_adtv_std(df,nGiorni = 5)
+    
+    #primo grafico in alto a sinistra
+    axs[0][0].scatter(adtv5,adtv_std5)
+    axs[0][0].set_title("ADTV 5 vs ADTV Std 5")
+    #secondo grafico in alto a destra
+    axs[0][1].hist(df["ADTV 5"],color='C0', bins = 10)
+    axs[0][1].hist(df["ADTV Std 5"],color='C1', bins = 10)
+    axs.set_xlabel('ADTV 5 vs ADTV Std 5 (con bassi bin)')   
+    
+    
+    plt.show()
+
+    
